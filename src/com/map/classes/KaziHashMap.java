@@ -51,13 +51,13 @@ public class KaziHashMap<K, V> {
 				if (initialNode.getKey().equals(entered_node.getKey())) {
 					break;
 				}
-				if (initialNode.getNext() != null) {
-					initialNode = initialNode.getNext();
+				if (initialNode.hasNext()) {
+					initialNode.assignNode(initialNode.getNext());
 				}
-			} while (initialNode.getNext() != null);
+			} while (initialNode.hasNext());
 
 			if (initialNode.getKey().equals(entered_node.getKey())) {
-				initialNode = entered_node;
+				initialNode.assignNode(entered_node);
 			} else {
 				initialNode.setNext(entered_node);
 			}
