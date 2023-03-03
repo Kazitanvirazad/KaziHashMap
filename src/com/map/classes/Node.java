@@ -13,6 +13,21 @@ public class Node<K, V> {
 		setNext(next);
 	}
 
+	public void assignNode(Node<K, V> newNode) {
+		setKey(newNode.getKey());
+		setHash(newNode.getHash());
+		setValue(newNode.getValue());
+		setNext(newNode.getNext());
+	}
+
+	public boolean hasNext() {
+		if (this.next == null) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
 	public void setKey(K key) {
 		this.key = key;
 	}
