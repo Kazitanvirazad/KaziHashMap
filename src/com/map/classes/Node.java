@@ -13,14 +13,14 @@ public class Node<K, V> {
 		setNext(next);
 	}
 
-	public void assignNode(Node<K, V> newNode) {
-		setKey(newNode.getKey());
-		setHash(newNode.getHash());
-		setValue(newNode.getValue());
-		setNext(newNode.getNext());
+	void assignNode(Node<K, V> node) {
+		setKey(node.getKey());
+		setHash(node.getHash());
+		setValue(node.getValue());
+		setNext(node.getNext());
 	}
 
-	public boolean hasNext() {
+	boolean hasNext() {
 		if (this.next == null) {
 			return false;
 		} else {
@@ -28,35 +28,35 @@ public class Node<K, V> {
 		}
 	}
 
-	public void setKey(K key) {
+	void setKey(K key) {
 		this.key = key;
 	}
 
-	public void setHash(int hash) {
+	void setHash(int hash) {
 		this.hash = hash;
 	}
 
-	public void setValue(V value) {
+	void setValue(V value) {
 		this.value = value;
 	}
 
-	public void setNext(Node<K, V> next) {
+	void setNext(Node<K, V> next) {
 		this.next = next;
 	}
 
-	public K getKey() {
+	K getKey() {
 		return this.key;
 	}
 
-	public int getHash() {
+	int getHash() {
 		return this.hash;
 	}
 
-	public V getValue() {
+	V getValue() {
 		return this.value;
 	}
 
-	public Node<K, V> getNext() {
+	Node<K, V> getNext() {
 		return next;
 	}
 
