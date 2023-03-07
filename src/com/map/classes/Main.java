@@ -35,6 +35,7 @@ public class Main {
 			System.out.println(count + " - " + key + " <--key--value--> " + val);
 			count++;
 		}
+
 		System.out.println("\nMap Size: " + map.size());
 	}
 
