@@ -1,6 +1,5 @@
 package com.map.classes;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -145,7 +144,7 @@ public class KaziHashMap<K, V> {
 		return this.table;
 	}
 
-	public int getSize() {
+	public int size() {
 		return this.size;
 	}
 
